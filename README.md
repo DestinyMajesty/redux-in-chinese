@@ -2,7 +2,7 @@
 
 在线 Gitbook 地址：http://camsong.github.io/redux-in-chinese/
 
-英文原版：http://camsong.github.io/redux-in-chinese//
+英文原版：http://rackt.github.io/redux/
 
 **翻译正在进行中，[加入我们](#加入翻译)**
 
@@ -101,7 +101,7 @@ store.dispatch({ type: 'DECREMENT' });
 ```
 你应该把要做的修改变成一个普通对象，这个对象被叫做 *action*，而不是直接修改 state。然后编写专门的函数来决定每个 action 如何改变应用的 state，这个函数被叫做 *reducer*。
 
-如果你以前使用 Flux，你需要知道一个非常重要的区别。Redux 没有 Dispatcher 且不支持多个 store。相反，只有一个单一的 store 和一个根级的 reduce 函数（reducer）。随着应用不断变大，你应该把根级的 reducer 拆成多个小的 reducers，分别独立地操作 state 树的不同部分，而不是添加新的 stores。这就像一个 React 应用只有一个根级的组件，这个根组件又由很多小组件构成。
+如果你以前使用 Flux，那么你只需要注意一个重要的区别。Redux 没有 Dispatcher 且不支持多个 store。相反，只有一个单一的 store 和一个根级的 reduce 函数（reducer）。随着应用不断变大，你应该把根级的 reducer 拆成多个小的 reducers，分别独立地操作 state 树的不同部分，而不是添加新的 stores。这就像一个 React 应用只有一个根级的组件，这个根组件又由很多小组件构成。
 
 用这个架构开发计数器有点杀鸡用牛刀，但它的美在于做复杂应用和庞大系统时优秀的扩展能力。由于它可以用 action 追溯应用的每一次修改，因此才有强大的开发工具。如录制用户会话并回放所有 action 来重现它。
 
@@ -179,6 +179,7 @@ contributor: +your_github_acount+
 plain object | 普通对象
 manage  | 管理
 compose | 组合
+<<<<<<< HEAD
 action creator | action 生成器
 dispatch | 发起
 note | 注意
@@ -190,6 +191,23 @@ normalized | 规格化
 function | 函数/方法？
 composition | 合成
 helper utility | 辅助工具
+=======
+action creator | action 创建函数
+dispatch | 发起
+note | 注意
+hold | 维持
+state tree | state 树？
+state shape | state 结构
+handle | 处理
+boilerplate | 样板代码
+normalized | 范式化
+function | 函数？
+composition | 合成
+helper utility | 辅助工具
+this won’t work | 这样做行不通
+this will work | 这样做行得通
+tips | 小贴士
+>>>>>>> upstream/master
 
 ### 保留不译的名词
 
@@ -204,6 +222,10 @@ middleware | 中间件
 dispatcher | 分发器
 state | 状态
 props | 属性
+<<<<<<< HEAD
+=======
+UI | 用户界面
+>>>>>>> upstream/master
 
 ### 与原文同步机制
 

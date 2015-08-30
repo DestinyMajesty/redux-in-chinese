@@ -28,7 +28,7 @@
 
 >##### 处理 Reducer 关系时注意
 
->开发复杂的应用时，不可避免会有一些数据相互引用。建议你尽可能地把 state 规格化，不存在嵌套。把所有数据放到一个对象里，每个数据以 ID 为主键，不同数据相互引用时通过 ID 来查找。把应用的 state 想像成数据库。这种方法在 [normalizr](https://github.com/gaearon/normalizr) 文档里有详细阐述。例如，实际开发中，在 state 里同时存放 `todosById: { id -> todo }` 和 `todos: array<id>` 是比较好的方式（虽然你可以觉得冗余）。
+>开发复杂的应用时，不可避免会有一些数据相互引用。建议你尽可能地把 state 范式化，不存在嵌套。把所有数据放到一个对象里，每个数据以 ID 为主键，不同数据相互引用时通过 ID 来查找。把应用的 state 想像成数据库。这种方法在 [normalizr](https://github.com/gaearon/normalizr) 文档里有详细阐述。例如，实际开发中，在 state 里同时存放 `todosById: { id -> todo }` 和 `todos: array<id>` 是比较好的方式（虽然你可以觉得冗余）。
 
 ## Action 处理
 
@@ -101,7 +101,7 @@ function todoApp(state = initialState, action) {
 
 >##### `Object.assign` 使用提醒
 
->[`Object.assign()`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 是 ES6 特性，但多数浏览器并不支持。你要么使用 polyfill，[Babel 插件](https://github.com/babel-plugins/babel-plugin-object-assign)，或者使用其它库如 [`_.assign()`](https://lodash.com/docs#assign) 提供的帮助方法。 
+>[`Object.assign()`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 是 ES6 特性，但多数浏览器并不支持。你要么使用 polyfill，[Babel 插件](https://github.com/babel-plugins/babel-plugin-object-assign)，或者使用其它库如 [`_.assign()`](https://lodash.com/docs#assign) 提供的帮助方法。
 
 >##### `switch` 和样板代码提醒
 
@@ -126,7 +126,7 @@ function todoApp(state = initialState, action) {
         text: action.text,
         completed: false
       }]
-    });    
+    });
   default:
     return state;
   }

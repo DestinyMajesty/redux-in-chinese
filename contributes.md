@@ -33,7 +33,8 @@ contributor: demohi
 
 ```
 url: recipes/ReducingBoilerplate.html
-work_in_progress: false
+work_in_progress: true
+contributor: omytea
 ```
 
 ```
@@ -43,7 +44,8 @@ work_in_progress: false
 
 ```
 url: recipes/WritingTests.html
-work_in_progress: false
+work_in_progress: true
+contributor: omytea
 ```
 
 ```
@@ -58,7 +60,8 @@ work_in_progress: false
 
 ```
 url: Glossary.html
-work_in_progress: false
+work_in_progress: true
+contributor: omytea
 ```
 
 ```
